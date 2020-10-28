@@ -1,0 +1,7 @@
+{
+  "name": "jm4_2_5",
+  "version": "1.0.0",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

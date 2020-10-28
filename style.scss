@@ -1,0 +1,130 @@
+
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+button,
+select { /* 1 */
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+* {box-sizing: border-box;}
+
+.index {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #C4C4C4;
+  width: 100%;
+  height: 100%;
+
+  &__content {
+    margin-left: 77px;
+    margin-top: 62px;
+    width: 500px;
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 265px;
+    width: 100%;
+
+    &-input {
+      height: 61px;
+      width: 100%;
+      padding: 5px 13px;
+      background-color: white;
+      font-size: 48px;
+      border: none;
+      outline: none;
+    }
+
+    &-results {
+      position: absolute;
+      top: 61px;
+      left: 0;
+      width: 100%;
+
+      &-item {
+        width: 100%;
+        background-color: #E3E3E3;
+        border: 2px solid #000000;
+        height: 44px;
+        padding-left: 13px;
+        padding-right: 13px;
+        padding-bottom: 5px;
+        font-size: 30px;
+        text-align: left;
+
+        &:hover {
+          background-color: #65CDF9;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__items {
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      background-color: #E27BEB;
+      border: 1px solid #000000;
+      padding: 8px 16px;
+      font-size: 24px;
+
+      &-data {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      &-close {
+        background: none;
+        border: none;
+        margin-right: 17px;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
