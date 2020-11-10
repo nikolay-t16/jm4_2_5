@@ -15,9 +15,9 @@ const removeHandler = (node) => node.parentElement.remove();
 const addItem = ({ name, owner, stars }) => {
     const newNode = document.createRange().createContextualFragment(`<div class="index__items-item">
         <ul class="index__items-item-data">
-            <li>Name: ${name} </li>
-            <li>Owner: ${owner} </li>
-            <li>Stars: ${stars} </li>
+            <li>Name: ${name}</li>
+            <li>Owner: ${owner}</li>
+            <li>Stars: ${stars}</li>
         </ul>
         <button class="index__items-item-close js-index__items-item-close" type="button" onclick="removeHandler(this)">
             <img src="close.svg" alt="close" width="42"/>
@@ -31,7 +31,7 @@ const addSearchItem = ({ name, owner, stars }) => {
     const node = document.createElement('button');
     node.classList.add('index__form-results-item', 'js-index__form-results-item');
     node.type = 'button';
-    node.onclick = () => addItem({ name, owner, stars, node });
+    node.onclick = () => addItem({ name, owner, stars });
     node.innerText = name;
     searchItems.append(node);
 };
@@ -73,6 +73,4 @@ form.onsubmit = (e) => {
     e.preventDefault();
     debounceSearch(search.value);
 };
-search.onchange = () => debounceSearch(search.value);
-search.onkeyup = () => debounceSearch(search.value);
-search.onchange = () => debounceSearch(search.value);
+search.oninput = () => debounceSearch(search.value);
